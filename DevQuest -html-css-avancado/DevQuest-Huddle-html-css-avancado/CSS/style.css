@@ -1,0 +1,115 @@
+body {
+    align-items: center;
+    background: url(../images/bg-desktop.svg) no-repeat center center;
+    background-color: var(--primari-color-dark);
+    background-size: cover;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    max-width: var(--max-width-size);
+    min-height: 100vh;
+    padding: 55px;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: "logo logo"
+        "conteudo-principal conteudo-principal"
+        "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 100vh;
+    max-width: 100vw;
+
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.logo img {
+    height: 52px;
+    margin-bottom: 60px;
+}
+
+.conteudo-principal {
+    grid-area: conteudo-principal;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    margin: 0 auto;
+    grid-column-gap: 10px;
+
+}
+
+.conteudo-principal .info {
+    width: 50%;
+    grid-area: info;
+    padding: 12px;
+    color: #FFFFFF;
+}
+
+.conteudo-principal .info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 33px;
+}
+
+.conteudo-principal .info p {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.conteudo-principal .info .btn {
+    margin-top: 27px;
+    width: 200px;
+    height: 55px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primari-color-dark);
+    font-weight: 400;
+    font-size: 17px;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo-principal .info a:hover .btn {
+    color: #FFFFFF;
+    background-color: var(--primari-color-soft);
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 155px;
+}
+
+.footer .social a {
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 18px;
+    height: 45px;
+    justify-content: center;
+    transition: 0.3s;
+    width: 45px;
+}
+
+.footer .social a:hover {
+    border: 1px solid var(--primari-color-soft);
+    color: var(--primari-color-soft);
+}
